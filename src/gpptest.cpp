@@ -171,7 +171,7 @@ bus_call(GstBus *bus, GstMessage *msg, gpointer data)
         break;
     case GST_MESSAGE_EOS:
         /* end-of-stream */
-        // g_main_loop_quit(gdata->loop);
+        g_main_loop_quit(gdata->loop);
         break;
     case GST_MESSAGE_APPLICATION:
         if (gst_message_has_name(msg, "device_lost_connection"))
